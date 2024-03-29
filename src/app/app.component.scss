@@ -10,6 +10,8 @@
   --gray-700: oklch(36.98% 0.014 302.71);
   --gray-400: oklch(70.9% 0.015 304.04);
 
+  --cyan-500: #c1e8e7;
+
   --red-to-pink-to-purple-vertical-gradient: linear-gradient(
     180deg,
     var(--orange-red) 0%,
@@ -32,4 +34,29 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 97px;
+    background-color: var(--cyan-500);
+  }
+
+  &__header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    flex: 1 0 auto;
+  }
+
+  &__header-image {
+    max-width: 2000px;
+    background-image: url("/assets/images/banner.png");
+    flex-grow: 5;
+    height: 100%;
+  }
 }

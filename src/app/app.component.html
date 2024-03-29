@@ -1,5 +1,12 @@
-<main class="main">
-  <header>{{ "TITLE" | translate }}</header>
+<main class="app__main">
+  <header class="app__header">
+    <div class="app__header-title">
+      <span>
+        {{ "TITLE" | translate }}
+      </span>
+    </div>
+    <div class="app__header-image"></div>
+  </header>
 </main>
 
 <router-outlet></router-outlet>
