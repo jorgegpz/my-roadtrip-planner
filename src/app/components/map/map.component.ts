@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { GoogleMap } from '@angular/google-maps';
 
 @Component({
-  selector: 'app-map',
+  selector: 'rtp-map',
   standalone: true,
-  imports: [],
+  imports: [GoogleMap],
   templateUrl: './map.component.html',
-  styleUrl: './map.component.scss'
+  styleUrl: './map.component.scss',
 })
-export class MapComponent {
-
-}
+export class MapComponent {}
