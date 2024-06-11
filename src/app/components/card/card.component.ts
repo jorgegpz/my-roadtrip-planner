@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Card } from './card.model';
 
 @Component({
   selector: 'rtp-card',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
+  card = input.required<Card>();
 }
