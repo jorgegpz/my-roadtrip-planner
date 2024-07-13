@@ -2,5 +2,7 @@
   @for (card of cardList(); track $index) {
   <rtp-card class="card-list__card" [card]="card"></rtp-card>
   }
-  <span class="card-list__add-card-button" (click)="addCard()">+</span>
+  <button mat-fab (click)="addCard()">
+    <mat-icon>add</mat-icon>
+  </button>
 </div>

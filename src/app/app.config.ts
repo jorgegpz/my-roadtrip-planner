@@ -5,6 +5,7 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -23,6 +24,6 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpClient],
         },
       })
-    ),
+    ), provideAnimationsAsync(),
   ],
 };
