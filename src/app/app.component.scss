@@ -1,13 +1,20 @@
 :host {
-
-  --gray-900: oklch(19.37% 0.006 300.98);
-  --gray-700: oklch(36.98% 0.014 302.71);
-  --gray-400: oklch(70.9% 0.015 304.04);
-
+  --gray-900: oklch(19.37% 0.006 300.98deg);
+  --gray-700: oklch(36.98% 0.014 302.71deg);
+  --gray-400: oklch(70.9% 0.015 304.04deg);
   --cyan-500: #c1e8e7;
 
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
 
