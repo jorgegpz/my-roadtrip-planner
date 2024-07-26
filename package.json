@@ -7,8 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "clean:npm": "npm cache verify; npm prune"
   },
   "private": true,
   "dependencies": {
@@ -33,7 +34,8 @@
     "@angular-devkit/build-angular": "^18.1.2",
     "@angular/cli": "^18.1.2",
     "@angular/compiler-cli": "^18.1.2",
-    "@eslint/js": "^9.7.0",
+    "@eslint/js": "^9.8.0",
+    "@types/eslint__js": "^8.42.3",
     "@types/jasmine": "~5.1.0",
     "eslint": "^9.8.0",
     "globals": "^15.8.0",
