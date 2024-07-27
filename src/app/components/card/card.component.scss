@@ -1,5 +1,11 @@
 .card {
+  display: grid;
   height: 15rem;
   margin: 1rem 0;
   border-radius: 0.6rem;
+
+  &__remove-button {
+    justify-self: flex-end;
+    margin-left: auto;
+  }
 }

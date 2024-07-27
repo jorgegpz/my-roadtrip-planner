@@ -1,6 +1,6 @@
 <div class="card-list">
-  @for (card of cardList(); track $index) {
-    <rtp-card class="card-list__card" [card]="card"></rtp-card>
+  @for (cardId of cardList().keys(); track $index) {
+    <rtp-card @cardEnterLeave class="card-list__card" [card]="cardList().get(cardId)" (remove)="removeCard(cardId)"></rtp-card>
   }
   <button mat-fab (click)="addCard()">
     <mat-icon>add</mat-icon>

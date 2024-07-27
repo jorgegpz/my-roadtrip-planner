@@ -1,3 +1,13 @@
-<article @cardEnterLeave class="card-container">
-  <mat-card class="card" appearance="outlined"></mat-card>
+<article class="card-wrapper">
+  <mat-card class="card" appearance="outlined">
+    <mat-card-header class="card__header">
+      <mat-card-title>
+        {{ card().target }}
+      </mat-card-title>
+      <button class="card__remove-button" mat-mini-fab (click)="remove.emit()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content class="card__content"> </mat-card-content>
+  </mat-card>
 </article>
