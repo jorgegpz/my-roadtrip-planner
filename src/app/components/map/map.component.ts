@@ -1,12 +1,5 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-  OnInit,
-  viewChild,
-} from '@angular/core';
-import { Map, MapStyle, config } from '@maptiler/sdk';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, viewChild } from '@angular/core';
+import { Map, MapStyle, Marker, config } from '@maptiler/sdk';
 
 import '@maptiler/sdk/dist/maptiler-sdk.css';
 
@@ -28,8 +21,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     const initialState = {
-      lat: 36.72,
-      lng: -4.47,
+      lat: 36.72288146320298,
+      lng: -4.481973402261764,
       zoom: 14,
     };
 
@@ -39,9 +32,15 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       center: [initialState.lng, initialState.lat],
       zoom: initialState.zoom,
     });
+
+    this.addMarker(initialState.lng, initialState.lat);
   }
 
   ngOnDestroy() {
     this.map?.remove();
+  }
+
+  addMarker(longitude: number, latitude: number) {
+    new Marker({ color: '#FF0000' }).setLngLat([longitude, latitude]).addTo(this.map);
   }
 }
