@@ -4,12 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "postbuild": "node ./src/scripts/postbuild.js",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "clean:npm": "npm cache verify; npm prune"
+    "clean:npm": "npm cache verify; npm prune",
+    "update-angular": "ng update @angular/cli @angular/core --allow-dirty"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +28,7 @@
     "@maptiler/sdk": "^2.0.3",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "purgecss": "^6.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
