@@ -4,12 +4,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import settings from './app.settings.json';
 
 @Component({
-  selector: 'rtp-root',
-  standalone: true,
-  imports: [RouterOutlet, TranslateModule],
-  providers: [TranslateService],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'rtp-root',
+    imports: [RouterOutlet, TranslateModule],
+    providers: [TranslateService],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class RtpComponent {
   constructor(private translateService: TranslateService) {

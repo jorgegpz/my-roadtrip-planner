@@ -6,17 +6,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { Card } from './card.model';
 
 @Component({
-  selector: 'rtp-card',
-  standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss',
-  animations: [
-    trigger('cardEnterLeave', [
-      transition(':enter', [style({ height: 0 }), animate('100ms', style({ height: '15rem' }))]),
-      transition(':leave', [animate('5000ms', style({ opacity: 0 }))]),
-    ]),
-  ],
+    selector: 'rtp-card',
+    imports: [MatCardModule, MatButtonModule, MatIconModule],
+    templateUrl: './card.component.html',
+    styleUrl: './card.component.scss',
+    animations: [
+        trigger('cardEnterLeave', [
+            transition(':enter', [style({ height: 0 }), animate('100ms', style({ height: '15rem' }))]),
+            transition(':leave', [animate('5000ms', style({ opacity: 0 }))]),
+        ]),
+    ]
 })
 export class CardComponent {
   card = input.required<Card>();
